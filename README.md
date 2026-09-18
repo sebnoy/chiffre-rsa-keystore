@@ -13,6 +13,26 @@ partir de ces structs et des constantes publiques exposées ici
 (`SCHEMA_VERSION`, `DOCUMENT_TYPE_*`, `SIGNATURE_ALGORITHM`,
 `KEY_PUBLIC_FORMAT`) — jamais l'inverse.
 
+# Auteur et statut du projet
+
+Ce crate atteint sa v1.0.0. Il s'appuie sur `chiffre-rsa-core` v1.0.0
+(tagué), lui-même dépendant de `chiffre-aes-core` v2.0.0 — voir
+[NOTICE.md](./NOTICE.md) pour l'état exact de cette chaîne de
+dépendances.
+
+Aucun audit de sécurité externe n'a été réalisé à ce jour. La
+conception suit les mêmes principes de rigueur que le reste de
+l'écosystème `chiffre-*` (choix documentés et justifiés, tests contre
+des vecteurs indépendants), mais ça ne remplace pas une revue par un
+tiers qualifié avant tout usage en production.
+
+## Documentation technique
+
+Voir [FORMAT.md](./FORMAT.md) pour l'encodage déterministe utilisé
+pour la signature des documents de clé (les trois types : indépendant,
+organisation, admin), et `INTERFACES.md` à la racine du dépôt pour la
+conception détaillée.
+
 # Ce que ce crate fait — et ne fait pas
 
 **Fait** : produit des **faits observables**, jamais un verdict de
@@ -181,6 +201,14 @@ cargo test --features serde   # avec sérialisation JSON
 Mêmes prérequis que `chiffre-rsa-core`/`chiffre-rsa-enveloppe` :
 toolchain Rust ≥ 1.85 (via la dépendance transitive à `chiffre_aes_core`
 côté `chiffre-rsa-core`).
+
+# Transparence et réutilisation
+
+Comme le reste de l'écosystème `chiffre-*`, ce crate documente ses
+choix (y compris ceux qu'il ne fait pas, cf. "Ce que ce crate fait — et
+ne fait pas" ci-dessus) pour que quiconque l'évalue ou le réutilise
+puisse le faire en connaissance de cause, sans avoir à relire le code
+source pour en retrouver les hypothèses.
 
 # Licence
 

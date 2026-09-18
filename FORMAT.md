@@ -155,7 +155,7 @@ structs Rust ci-dessus reste correcte — ce fichier spécifie l'encodage
 
 ## 8. Statut
 
-Document à jour à la date de rédaction (crate v0.1.0). Toute
+Document à jour à la date de rédaction (crate v1.0.0). Toute
 modification de l'ordre des champs, de leur encodage, ou des constantes
 (`SCHEMA_VERSION` en particulier) casse la vérification de tout document
 déjà signé — un changement de `SCHEMA_VERSION` est donc la bonne façon de
