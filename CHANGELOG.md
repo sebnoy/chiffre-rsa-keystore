@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.1.0
+
+Aligne la dépendance sur `chiffre-rsa-core` **v1.1.0** (elle-même sur
+`chiffre_aes_core` v2.1.0). **Aucun changement de code, de format ni d'API**
+de `chiffre-rsa-keystore`.
+
+- **Dépendance : tag `v1.1.0`** de `chiffre-rsa-core`. Raison : les applications
+  qui utilisent ce crate avec `chiffre_aes_core` v2.1.0 n'ont ainsi qu'**une
+  seule** version de `chiffre_aes_core` dans leur graphe de dépendances.
+- **Vérification** : les 21 tests du crate passent inchangés contre
+  `chiffre-rsa-core` v1.1.0.
+- `Cargo.lock` mis à jour en conséquence.
+
 ## v1.0.0
 
 Première version publiée de `chiffre-rsa-keystore` — vérification et
