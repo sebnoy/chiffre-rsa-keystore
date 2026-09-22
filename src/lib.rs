@@ -26,6 +26,9 @@
 
 use chiffre_rsa_core::{RsaKeyPair, RsaPublicKey};
 
+/// Version de ce crate (`Cargo.toml`) — même usage que `chiffre_rsa_core::VERSION`.
+pub const VERSION: &str = env!("CARGO_PKG_VERSION");
+
 /// Version du schéma de document de clé (distincte des versions de
 /// crate, qui sont des métadonnées déclaratives parmi d'autres — voir
 /// `CommonFields`). Fait partie de l'encodage signé : un changement de

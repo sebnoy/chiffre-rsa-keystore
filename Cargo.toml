@@ -1,6 +1,6 @@
 [package]
 name = "chiffre-rsa-keystore"
-version = "1.1.0"
+version = "1.2.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "Vérification et classification de clés publiques RSA — aucune décision de confiance automatique"
@@ -8,7 +8,7 @@ repository = "https://github.com/sebnoy/chiffre-rsa-keystore"
 readme = "README.md"
 
 [dependencies]
-chiffre-rsa-core = { git = "https://github.com/sebnoy/chiffre-rsa-core", tag = "v1.1.0" }
+chiffre-rsa-core = { git = "https://github.com/sebnoy/chiffre-rsa-core", tag = "v1.2.0" }
 serde = { version = "1", features = ["derive"], optional = true }
 
 [features]

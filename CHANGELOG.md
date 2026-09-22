@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.2.0
+
+Ajoute une constante publique de version et suit `chiffre-rsa-core` v1.2.0. **Aucun changement de code, de format ni d'API.**
+
+- **`pub const VERSION: &str = env!("CARGO_PKG_VERSION")`** — même raison que `chiffre_rsa_core::VERSION` (v1.2.0) : `enrollement-api`
+  peut lire la version compilée au lieu de la recopier à la main.
+- **Dépendance : tag `v1.2.0`** de `chiffre-rsa-core`.
+- Tests : les 21 tests existants passent inchangés ; `clippy` : aucun avertissement ajouté.
+
 ## v1.1.0
 
 Aligne la dépendance sur `chiffre-rsa-core` **v1.1.0** (elle-même sur
