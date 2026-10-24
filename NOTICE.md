@@ -7,7 +7,7 @@ dépendances (`cargo about` ou `cargo license`).
 
 | Crate | Licence |
 |---|---|
-| chiffre-rsa-core | MIT OR Apache-2.0 (v1.1.0, tag Git — voir sa propre `NOTICE.md`) |
+| chiffre-rsa-core | MIT OR Apache-2.0 (v1.2.1, tag Git — voir sa propre `NOTICE.md`) |
 | serde (optionnelle, feature `serde`) | MIT OR Apache-2.0 |
 
 ## Dépendances de développement uniquement (tests)

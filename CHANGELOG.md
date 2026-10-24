@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.2.1
+
+Version de maintenance issue d'un audit selon le *Guide de développement
+sécurisé en Rust* de l'ANSSI. **Aucun changement de code, de format de
+signature ni d'API.**
+
+- **Dépendance : tag `v1.2.1`** de `chiffre-rsa-core`, lui-même sur
+  `chiffre-aes-core` v2.1.1. Une application qui utilise plusieurs de ces
+  crates doit les prendre aux mêmes tags, faute de quoi les types partagés
+  existent en deux versions incompatibles.
+- **Dépendances** — `ctutils` 0.4.5 dans `Cargo.lock` (RUSTSEC-2026-0385 :
+  opérations qui n'étaient pas en temps constant).
+- **RUSTSEC-2023-0071 (« Marvin », crate `rsa`)** — aucune version corrigée
+  n'existe. L'avis est ignoré dans `.cargo/audit.toml` avec sa justification
+  (les opérations à clé privée s'exécutent sur l'appareil de l'utilisateur).
+- **`scripts/verifier.sh`** — enchaîne `clippy` (avertissements refusés),
+  `cargo audit` et les tests.
+- Tests : les 22 tests passent inchangés ; `clippy` : aucun avertissement.
+
 ## v1.2.0
 
 Ajoute une constante publique de version et suit `chiffre-rsa-core` v1.2.0. **Aucun changement de code, de format ni d'API.**

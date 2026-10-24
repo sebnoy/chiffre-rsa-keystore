@@ -15,8 +15,8 @@ partir de ces structs et des constantes publiques exposées ici
 
 # Auteur et statut du projet
 
-Ce crate atteint sa v1.2.0. Il s'appuie sur `chiffre-rsa-core` v1.2.0
-(tagué), lui-même dépendant de `chiffre-aes-core` v2.1.0 — voir
+Ce crate atteint sa v1.2.1. Il s'appuie sur `chiffre-rsa-core` v1.2.1
+(tagué), lui-même dépendant de `chiffre-aes-core` v2.1.1 — voir
 [NOTICE.md](./NOTICE.md) pour l'état exact de cette chaîne de
 dépendances.
 
