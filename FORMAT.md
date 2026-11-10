@@ -141,6 +141,17 @@ possession de la clé privée admin. Pas de `role`, pas
 d'`admin_fingerprint` (n'a pas de sens : la clé admin est elle-même la
 racine de confiance).
 
+**Une auto-signature valide ne prouve aucune autorité.** N'importe qui
+peut générer une paire RSA et produire un document admin « valide » au nom
+de n'importe quelle organisation : `classify_admin_key` vérifie seulement
+la cohérence du document avec sa propre clé. L'application doit fixer la
+clé admin de confiance par un moyen indépendant (empreinte vérifiée par
+un canal sûr, clé reçue lors de l'inscription auprès du serveur), la
+conserver, et la passer elle-même comme `trusted_admin_key` à
+[`classify_org_user`] — jamais accepter comme référence une clé admin
+importée ou reçue après coup sans cette vérification, ni remplacer la clé
+fixée par un document de même nom d'organisation.
+
 ## 7. Correspondance côté application (rappel)
 
 Ce crate ne construit ni ne lit de JSON — c'est à l'application de

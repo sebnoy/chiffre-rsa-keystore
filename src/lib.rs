@@ -529,6 +529,15 @@ pub fn sign_admin_key(fields: &AdminKeyFields, admin_key: &RsaKeyPair) -> Vec<u8
 }
 
 /// Vérifie et classifie un document de clé admin.
+///
+/// **`signature_valid == Some(true)` prouve seulement que le document est
+/// cohérent avec sa propre clé** (auto-signature) : n'importe qui peut en
+/// produire un au nom de n'importe quelle organisation. Ce rapport ne
+/// prouve donc aucune autorité. La clé admin de confiance doit être fixée
+/// par l'application par un moyen indépendant (empreinte vérifiée par un
+/// canal sûr, clé reçue à l'inscription), conservée, puis passée comme
+/// `trusted_admin_key` à [`classify_org_user`] — jamais remplacée par un
+/// document importé ou reçu après coup. Voir `FORMAT.md` §6.
 pub fn classify_admin_key(
     fields: &AdminKeyFields,
     public_key: &RsaPublicKey,

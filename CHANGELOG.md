@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.0.0
+
+**Aucun changement de code ni de format de signature.** Passage à
+`chiffre-rsa-core` **v2.0.0** (lui-même sur `chiffre_aes_core` v3.0.0).
+
+- **Version majeure** : `RsaKeyPair` et `RsaPublicKey`, présents dans l'API
+  publique, viennent désormais de `chiffre-rsa-core` v2.0.0. Une application
+  qui utilise plusieurs de ces crates doit les prendre aux mêmes tags.
+- **Documentation : ce que prouve un document admin** (`classify_admin_key`,
+  `FORMAT.md` §6) — une auto-signature valide ne prouve aucune autorité :
+  n'importe qui peut en produire une au nom de n'importe quelle organisation.
+  La clé admin de confiance doit être fixée par l'application par un moyen
+  indépendant, jamais remplacée par un document importé. Précision ajoutée
+  après la découverte, dans la messagerie, d'une clé admin remplaçable par
+  simple import d'un faux document.
+- Tests : les 22 tests passent (`--all-features`) ; `clippy` : aucun
+  avertissement ; `cargo audit` : rien à signaler.
+
 ## v1.2.1
 
 Version de maintenance issue d'un audit selon le *Guide de développement
