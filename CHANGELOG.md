@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.1
+
+**Aucun changement de code.** Dépendance : tag `v2.0.1` de `chiffre-rsa-core`
+(lui-même sur `chiffre_aes_core` v3.1.0).
+
 ## v2.0.0
 
 **Aucun changement de code ni de format de signature.** Passage à
